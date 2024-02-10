@@ -1,0 +1,51 @@
+/* NavScrollExample.css */
+
+.navbar-custom {
+  background-color: #BBE1FA !important;
+  
+  background-image: radial-gradient(650px circle at 0% 0%,
+  #BBE1FA 15%, /* Change the color */
+  #0F4C75 35%, /* Change the color */
+  #3282B8 75%, /* Change the color */
+  #BBE1FA 80%, /* Change the color */
+  transparent 100%),
+radial-gradient(1250px circle at 100% 100%,
+  #BBE1FA 15%, /* Change the color */
+  #0F4C75 35%, /* Change the color */
+  #3282B8 75%, /* Change the color */
+  #BBE1FA 80%, /* Change the color */
+  transparent 100%);
+   
+  }
+  
+  .navbar-brand-custom {
+    color: #0F4C75 !important; /* Change the color of the navbar brand text */
+    
+  }
+  .logo-img{
+   width: 60px !important;
+  }
+  .nav-link-custom{
+    color: white !important;
+    font-size: 20px !important;
+  }
+  
+  .nav-link-custom {
+    color: #ffffff; /* Change the color of the navbar links */
+  }
+  
+  .btn-search {
+    margin-left: 10px; /* Add margin to the search button */
+  }
+  
+  .btn-user {
+    margin-left: 10px; /* Add margin to the user dropdown button */
+    background-color:#0F4C75 !important; /* Change the background color of the user dropdown button */
+    border-color: #ffffff; /* Change the border color of the user dropdown button */
+  }
+  
+  .btn-user:hover {
+    background-color:#03273f !important; /* Change the background color of the user dropdown button */
+    border-color: #ffffff; /* Change the border color of the user dropdown button on hover */
+  }
+  

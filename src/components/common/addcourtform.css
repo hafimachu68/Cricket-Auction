@@ -1,0 +1,64 @@
+/* addcourtform.css */
+
+/* Style for form container */
+.s{
+    background-color:#014122;
+}
+.mg {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color:  #00C060 !important;
+  border-radius: 8px;
+
+}
+.row{
+    padding-top: 2rem;
+}
+
+/* Style for form labels */
+.form-label {
+
+  font-weight: 500;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Style for input fields */
+.form-control {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style for file input */
+.file-input {
+  margin-top: 10px;
+}
+
+/* Style for submit button */
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Style for reset button */
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Style for checkbox */
+.form-check-label {
+  font-weight: normal;
+}
+

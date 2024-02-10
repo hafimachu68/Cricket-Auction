@@ -1,0 +1,32 @@
+/* Home.css */
+
+.carousel-container {
+    background-color: #f8f9fa; /* Set background color */
+    /* padding: 50px 0; Adjust padding as needed */
+  }
+  
+  .carousel-inner img {
+    height: 330px; /* Set the height of carousel images */
+    width: 610px !important ;
+    object-fit: cover; /* Ensure images cover the entire carousel area */
+  }
+  .pr{
+    font-family: 'Times New Roman', Times, serif !important;
+  }
+  
+.f{
+    background-image: url("../pictures/bggrnd.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+}  
+.pr{
+  color: navy !important;;
+  background-color: rgba(15, 76, 117, 0.5) !important; /* Change the background color of the user dropdown button */
+}
+
+.mr{
+    background-color: black !important;
+}

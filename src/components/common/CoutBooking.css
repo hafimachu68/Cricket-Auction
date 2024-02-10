@@ -1,0 +1,282 @@
+/* CourtBooking.css */
+
+
+.full{
+  background-color: #BBE1FA !important;
+ 
+}
+
+.L{
+  background-image: url(../images/teambg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Styles for the main container */
+.single-court-img-box {
+    position: relative;
+    width:1067px;
+    height: 420px;
+    
+
+  }
+  
+  .single-court-img-box img {
+    width: 490px;
+    height: 420px;
+  }
+  .optn-img{
+    width: 35px !important;
+    height: 25px !important;
+  }
+  .dropdown-overlay {
+    position: absolute !important;
+    top: 10px; /* Adjust the top position */
+    left: 10px; /* Adjust the right position */
+    z-index: 100; /* Ensure the dropdown is above other content */
+    /* Additional styling for the dropdown */
+  }
+  .timer-overlay {
+    position: absolute !important;
+    top: 110px;
+    left: 800PX;
+}
+.input-overlay{
+  position: absolute !important;
+  top: 262px;
+  left: 770PX;
+  z-index: 1000px;
+
+}
+
+.op{
+  background-color: transparent !important;
+  border: none !important;
+}
+.court-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-box {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 2px solid  #010203;
+  border-radius: 10px;
+  background-color: #ece906;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.detail-box:hover {
+  transform: translateY(-3px);
+}
+
+.detail {
+  margin: 0;
+  color: #333;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.details-box {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 2px solid  #010203;
+  border-radius: 10px;
+  background-color: #223653;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.details-box:hover {
+  transform: translateY(-3px);
+}
+
+.details {
+  margin: 0;
+  color: #faf6f6;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.confetti-image-container {
+  position: fixed; /* Ensures that the image is positioned relative to the viewport */
+  top: 0;
+  left: 0;
+  width: 100%; /* Makes the image cover the entire width of the viewport */
+  height: 100%; /* Makes the image cover the entire height of the viewport */
+  z-index:2222px; /* Ensures that the image is on top of other content */
+}
+
+.confetti-image {
+  width: 50%; /* Adjust the width of the image as needed */
+  height: auto; /* Maintains the aspect ratio of the image */
+  border: 2px solid #ffffff; /* Adds a border to the image */
+  border-radius: 10px; /* Adds rounded corners to the border */
+  position: absolute; /* Positions the image relative to its container */
+  top: 50%; /* Positions the image at the vertical center */
+  left: 50%; /* Positions the image at the horizontal center */
+  transform: translate(-50%, -50%); /* Centers the image */
+}
+
+.court-name {
+  position: fixed;
+  bottom: 10px;
+  
+  color: #111010;
+  padding: 77px;
+  border-radius: 15px;
+  position: absolute !important;
+  bottom: -50px !important;
+  left: 340px;
+  /* z-index: 100; */
+  width: calc(50% - 20px);
+}
+  /* Styles for the marquee */
+  .rolling.booking {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #010203;
+    padding: 10px;
+  }
+  
+  /* Styles for the date picker and time slots */
+  .date-picker {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .slotname-container {
+    margin-top: 10px;
+  }
+  
+  .slotname-container span {
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+    background-color: #eee;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .in{
+    width: 550px !important; 
+    height: 270px !important; 
+    padding: 10px; /* Add padding inside the input box */
+    border: none; /* Add a solid border around the input box */
+    border-radius: 5px; /* Add rounded corners to the input box */
+    font-size: 200px !important;
+    background-color: transparent !important;
+    outline: none; /* Remove the default focus outline */
+    box-sizing: border-box; /* Ensure that padding and border are included in the box's total width and height */
+
+  }
+  
+  /* Styles for the "Book Now" button */
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  form {
+    margin-top: 10px;
+
+
+  }
+  
+  form input,
+  form button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+ .cus-drop-down{
+  position: absolute;
+  padding: 5px;
+  border: 1px solid black;
+  width: 200px;
+ }
+ .cus-option{
+  position: absolute;
+  width: 100%;
+  top: 35px;
+  left: 0px;
+  min-height: 180px;
+  z-index: 4;
+  max-height: 200px;
+  background-color: white;
+  border: 1px solid rgb(35,14,14,.6);
+  overflow: auto;
+ }
+ .cus-option li {
+  list-style-type: none;
+  padding: 5px;
+  border-bottom: 1px solid black;
+}
+
+.close-button {
+  /* Styles for the close button */
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  font-size: 30px;
+  color: #333;
+}
+
+.button-icon{
+  width: 150px;
+}
+.button-ic {
+  width: 185px;
+  height: 275px;
+}
+
+/* timer */
+.timer-box {
+  border: 2px solid #010203;
+  border-radius: 5px;
+  /* padding: 20px; */
+  width: 400px; /* Adjust width as needed */
+  height:  160px;
+  margin: 0 auto; /* Center the box horizontally */
+}
+.tm{
+  font-size: 100px;
+}
+
+.timer-content {
+  text-align: center;
+}
+
+.golden {
+  background-color: #ffd700 !important; /* Golden yellow color */
+  color: #fff !important; /* White text color */
+  border: none !important; /* No border */
+  padding: 10px 20px !important; /* Padding for the button */
+  font-size: 16px !important; /* Font size */
+  border-radius: 5px !important; /* Rounded corners */
+  cursor: pointer; /* Cursor style */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2) !important; /* Box shadow for depth */
+  transition: all 0.3s ease !important; /* Smooth transition */
+  font-weight: bold !important;
+}
+.ms{
+  color:#010203;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.golden:hover {
+  background-color: #e6ac00 !important; /* Darker golden yellow on hover */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2) !important; /* Increase shadow on hover */
+}
+
+
+.dclose {
+  padding: 0;
+  background: none;
+  border: none;
+  
+}
+.de{
+  color: #eb4808 !important;
+}
