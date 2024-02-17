@@ -1,6 +1,6 @@
 import React from 'react'
 import NavScrollExample from '../components/common/Navbar'
-import Addcourtform from '../components/common/Addcourtform'
+import Addcourtform from '../components/common/Addplayerform'
 
 function Addcourt() {
   return (

@@ -1,13 +1,5 @@
 import React, { useState } from 'react';
-// import {
-//   MDBValidation,
-//   MDBValidationItem,
-//   MDBInput,
-//   MDBBtn,
-//   MDBFile,
-//   MDBCheckbox
-// } from 'mdb-react-ui-kit';
-import './addcourtform.css'; // Import your custom CSS file
+import './addplayerform.css'; // Import your custom CSS file
 import Axiosinstance from '../../config/Axiosinstances';
 import { toastError, toastSucess } from '../../constants/Plugin';
 import { useNavigate } from 'react-router-dom';

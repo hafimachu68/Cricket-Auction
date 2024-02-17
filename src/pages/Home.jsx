@@ -7,17 +7,15 @@ import '.././pages/css/Home.css'; // Import your custom CSS file
 import { Carousel } from 'react-bootstrap'; // Import Carousel from react-bootstrap
 import c1 from './pictures/L1.jpg';
 import c2 from './pictures/L2.jpg';
-import c3 from './pictures/L3n.jpeg';
 import c4 from './pictures/L4.jpeg';
 import c5 from './pictures/L5.jpeg';
-import A1 from './pictures/a1n.png';
 import A2 from './pictures/A2.jpg';
-import A3 from './pictures/A3n.jpg';
 import A4 from './pictures/A4.jpg';
 
 
+
 function Home() {
-  const [courtData, setCourtData] = useState([]);
+  const [playerData, setPlayerData] = useState([]);
   const [groupData, setGroupData] = useState([]);
   const navigate = useNavigate();
 
@@ -26,14 +24,15 @@ function Home() {
   }, []);
 
   const fetchData = () => {
-    getAllCourtsData();
+    getAllPlayersData();
     getAllGroupsData();
   };
 
-  const getAllCourtsData = () => {
-    Axiosinstance.get('/users/getAllcourtsData')
+  const getAllPlayersData = () => {
+    Axiosinstance.get('/users/getAllPlayersData')
       .then((response) => {
-        setCourtData(response.data);
+        setPlayerData(response.data);
+        // console.log(response.data);
       })
       .catch((err) => {
         if (err.response.data.message === 'unauthorized user') {
@@ -47,19 +46,20 @@ function Home() {
     Axiosinstance.get('/users/getGroups')
       .then((response) => {
         setGroupData(response.data);
+        console.log(response.data);
       })
       .catch((err) => {
         console.error('Error fetching groups:', err);
       });
   };
 
-  const filterCourtsByGroup = () => {
-    const matchedCourtIds = groupData.reduce((acc, group) => {
-      const courtIdsInGroup = group.courts.map(court => court.courtName);
-      return [...acc, ...courtIdsInGroup];
+  const filterPlyersByGroup = () => {
+    const matchedPlayerIds = groupData.reduce((acc, group) => {
+      const playerIdsInGroup = group.players.map(player => player.playerName);
+      return [...acc, ...playerIdsInGroup];
     }, []);
 
-    const filteredCourts = courtData.filter(court => !matchedCourtIds.includes(court.courtName));
+    const filteredCourts = playerData.filter(player => !matchedPlayerIds.includes(player.PlayerName));
     return filteredCourts;
   };
 
@@ -75,23 +75,14 @@ function Home() {
         <Carousel.Item>
           <img src={c2} className="d-block w-100" alt="Carousel Image 2" />
         </Carousel.Item>
-        <Carousel.Item>
-          <img src={c3} className="d-block w-100" alt="Carousel Image 3" />
-        </Carousel.Item>
-        <Carousel.Item>
+       <Carousel.Item>
           <img src={c1} className="d-block w-100" alt="Carousel Image 4" />
         </Carousel.Item>
         <Carousel.Item>
           <img src={c5} className="d-block w-100" alt="Carousel Image 5" />
         </Carousel.Item>
         <Carousel.Item>
-          <img src={A1} className="d-block w-100" alt="Carousel Image 2" />
-        </Carousel.Item>
-        <Carousel.Item>
           <img src={A2} className="d-block w-100" alt="Carousel Image 3" />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img src={A3} className="d-block w-100" alt="Carousel Image 4" />
         </Carousel.Item>
         <Carousel.Item>
           <img src={A4} className="d-block w-100" alt="Carousel Image 5" />
@@ -124,9 +115,9 @@ function Home() {
        
         <div className="row row-cols-1 row-cols-md-5 mx-2 g-4">
           {/* Render filtered courts */}
-          {filterCourtsByGroup().map((court) => (
-            <div key={court._id} className="col">
-              <Cards court={court} />
+          {filterPlyersByGroup().map((player) => (
+            <div key={player._id} className="col">
+              <Cards player={player} />
             </div>
           ))}
         </div>

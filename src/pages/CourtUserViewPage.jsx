@@ -1,6 +1,6 @@
 import React from 'react'
 import NavScrollExample from '../components/common/Navbar'
-import CourtBooking from '../components/common/CourtBooking'
+import CourtBooking from '../components/common/PlayerBid'
 
 function CourtUserViewPage() {
   

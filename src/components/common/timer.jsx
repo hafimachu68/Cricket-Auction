@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './CoutBooking.css';
+import './Playerbid.css';
 
 function Timer() {
   const [totalSeconds, setTotalSeconds] = useState(0);

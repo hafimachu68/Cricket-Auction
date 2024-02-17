@@ -8,7 +8,6 @@ import {
 from 'mdb-react-ui-kit';
 import Loginbox from '../components/Loginbox';
 import Signupbox from '../components/Signupbox';
-import loginBg from './pictures/loginBg.png'
 
 
 function Login(){
@@ -26,7 +25,7 @@ function Login(){
   🏏"PPL"🏏 <br />
   <span style={{ color: '#BBE1FA' }}>PADNE PREMIER LEAGUE !</span>
   <br /> 
-  <span style={{ color: '#010203' }}>🥎 KMCC PADNE PANCHAYAT </span>
+  <span style={{ color: '#010203' }}>🥎MAKE A TEAM </span>
 
 </h1>
   

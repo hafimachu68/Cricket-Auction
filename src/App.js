@@ -10,10 +10,7 @@ import MyGroupsPage from './components/common/myplayer';
 import Addteam from './pages/Addteam';
 import TeamUserViewPage from './pages/TeamUserViewPages';
 import Teamsview from './pages/Teamsviews';
-import Myteams from './pages/Myteams';
 import TeamPage from './components/common/MYTEAMS';
-// import Teamsview from './pages/Teamsview';
-// import TeamUserViewPage from './pages/TeamUserViewPage';
 
 
 function App() {

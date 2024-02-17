@@ -1,8 +1,6 @@
 .cd {
   background-color: transparent!important;
   border: none !important;
-  /* Add shadow effect */
-  /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); You can adjust the shadow values as needed */
   transition: transform 0.3s ease-in-out; /* Add transition effect */
 }
 

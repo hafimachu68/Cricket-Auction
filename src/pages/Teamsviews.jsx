@@ -8,22 +8,29 @@ import GroupCard from '../components/common/groupcard'; // Make sure to import G
 import '.././pages/css/Home.css'; // Import your custom CSS file
 import c1 from './pictures/L1.jpg';
 import c2 from './pictures/L2.jpg';
-import c3 from './pictures/L3n.jpeg';
 import c4 from './pictures/L4.jpeg';
 import c5 from './pictures/L5.jpeg';
 
 function Teamsview() {
-    const [courtData, setCourtData] = useState([]);
+    const [teamData, setTeamData] = useState([]);
+    const [groupteamData, setGroupteamData] = useState([]);
+
     const navigate= useNavigate();
 
     useEffect(() => {
-        getAllteamsData();
+        fetchData();
     }, []);
+
+    const fetchData = () => {
+        getAllGTeamsData();
+        getAllteamsData();
+      };
+    
 
     const getAllteamsData = () => {
         Axiosinstance.get('/users/getAllteamsData')
             .then((response) => {
-                setCourtData(response.data);
+                setTeamData(response.data);
             })
             .catch((err) => {
                 if (err.response.data.message === 'unauthorized user') {
@@ -32,6 +39,27 @@ function Teamsview() {
                 }
             });
     };
+
+    const getAllGTeamsData = () => {
+        Axiosinstance.get('/users/getteams')
+          .then((response) => {
+            setGroupteamData(response.data);
+          })
+          .catch((err) => {
+            console.error('Error fetching groups:', err);
+          });
+      };
+    
+      const filterteamsByGroup = () => {
+        const matchedteamIds = groupteamData.reduce((acc, team) => {
+          const teamIdsInGroup = team.teams.map(team => team.teamName);
+          return [...acc, ...teamIdsInGroup];
+        }, []);
+    
+        const filteredteams = teamData.filter(team => !matchedteamIds.includes(team.teamName));
+        return filteredteams;
+      };
+    
 
     return (
         <>
@@ -43,9 +71,6 @@ function Teamsview() {
                     </Carousel.Item>
                     <Carousel.Item>
                         <img src={c2} className="d-block w-100" alt="Carousel Imge 2" />
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img src={c3} className="d-block w-100" alt="Carousel Imge 3" />
                     </Carousel.Item>
                     <Carousel.Item>
                         <img src={c1} className="d-block w-100" alt="Carousel Imge 4" />
@@ -80,7 +105,7 @@ function Teamsview() {
             <div className="container-fluid mt-2 L">
                 <div className="row row-cols-1 row-cols-md-4 mx-2 g-4 ">
                     {/* Adjusted row-cols-md-4 to display 4 cards in the same row */}
-                    {courtData.map((team) => (
+                    {filterteamsByGroup().map((team) => (
                         <div key={team.id} className="col">
                             <GroupCard team={team} />
                         </div>

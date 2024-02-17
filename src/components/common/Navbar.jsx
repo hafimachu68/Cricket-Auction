@@ -2,7 +2,6 @@ import React from 'react';
 import { Navbar, Container, Nav, Form, Dropdown } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import './navbar.css'; // Import your custom CSS file
 import ogo from '../images/bas.png'; // Import your logo image
 

@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import NavScrollExample from './Navbar';
 import Axiosinstance from '../../config/Axiosinstances';
-import { BASE_URL } from '../../constants/constants';
 import Table from 'react-bootstrap/Table';
-import './CoutBooking.css';
+import './Playerbid.css';
 import { toastError, toastSucess } from '../../constants/Plugin';
 
 
@@ -59,14 +58,7 @@ function TeamPage() {
                                     <td>{team.price}</td>
                                 </tr>
                             ))}
-                            {/* <tr>
-                                <td>TOTAL POINTS</td>
-                                <td>{group.teams.reduce((acc, court) => acc + parseFloat(court.price), 0)}</td> 
-                            </tr> */}
-                            {/* <tr>
-                                <td>BALANCE</td>
-                                <td>{100000 - group.courts.reduce((acc, court) => acc + parseFloat(court.price), 0) }</td>
-                            </tr> */}
+                           
                         </tbody>
                     </Table>
                 </div>
