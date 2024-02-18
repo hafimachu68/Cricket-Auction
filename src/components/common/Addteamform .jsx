@@ -34,7 +34,7 @@ export default function Addteamform() {
       params: formValue,
       Headers: { 'content-Type': 'multipart/form-data' }
     })
-      .then((response) => {
+      .then((response) => {  
         toastSucess('team Data added successfully');
         navigate('/home');
       })
@@ -98,13 +98,13 @@ export default function Addteamform() {
                     id="teamimage"
                     name="teamimage"
                     onChange={addfileData}
-                    required
+                    required   
                   />
                 </div>
                 {selectedimage && (
                   <img
                     src={selectedimage}
-                    alt="Selected Image"
+                    alt="Selected pic"
                     className="img-fluid"
                   />
                 )}
