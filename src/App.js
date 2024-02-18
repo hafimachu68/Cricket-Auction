@@ -4,7 +4,7 @@ import Addcourt from './pages/Addcourt';
 import CourtUserViewPage from './pages/CourtUserViewPage';
 import Home from './pages/Home';
 import Login from './pages/Login';
-import{BrowserRouter,Route,Routes,Link}from'react-router-dom'
+import{BrowserRouter,Route,Routes}from'react-router-dom'
 import { AdminAuth, LoginAuth, UserAuth } from './Authorization/authorization';
 import MyGroupsPage from './components/common/myplayer';
 import Addteam from './pages/Addteam';

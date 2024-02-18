@@ -130,7 +130,7 @@ export default function Addcourtform() {
                 {selectedimage && (
                   <img
                     src={selectedimage}
-                    alt="Selected Image"
+                    alt="Selected-pic"
                     className="img-fluid"
                   />
                 )}

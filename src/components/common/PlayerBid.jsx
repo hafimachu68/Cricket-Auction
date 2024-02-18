@@ -65,7 +65,7 @@ function CourtBooking() {
   useEffect(() => {
     getSinglePlayerData()
 
-  }, [])
+  },[])
 
   const getSinglePlayerData = () => {
     Axiosinstance.get('/users/getSinglePlayerData', { params: { playerId: id } }).then((res) => {
@@ -118,7 +118,7 @@ function CourtBooking() {
        playerName: singlePlayerData.PlayerName,
         code: singlePlayerData.code,
         basepoint: singlePlayerData.basepoint,
-        image: singlePlayerData. CourtPic,
+        image: singlePlayerData.CourtPic,
         bidpoint:inputValue,
         group: group // Assuming group is passed as a parameter
     };
@@ -216,7 +216,7 @@ useEffect(() => {
 
         </Dropdown.Menu>
       </Dropdown>
-        <img src={`${BASE_URL}/courts/${singlePlayerData?. CourtPic}`} alt="court " />
+        <img src={`${BASE_URL}/courts/${singlePlayerData?.CourtPic}`} alt="court " />
         <div className='court-name'>
         <div className="court-details">
   <div className="detail-box">
@@ -232,7 +232,7 @@ useEffect(() => {
     <h4 className="detail">ROLE: {singlePlayerData?.role}</h4>
   </div>
   <div className="detail-box">
-    <h4 className="detail">BASE POINT: {singlePlayerData?.basepoint}</h4>
+    <h4 className="detail">BASE POINT:{singlePlayerData?.basepoint}</h4>
   </div>
 </div>
 </div>

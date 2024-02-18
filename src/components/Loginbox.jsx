@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import {
-  MDBBtn,
   MDBCol,
   MDBCard,
   MDBCardBody,
   MDBInput,
-  MDBCheckbox,
   
 }
 from 'mdb-react-ui-kit';
