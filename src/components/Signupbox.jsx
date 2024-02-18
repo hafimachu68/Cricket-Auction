@@ -67,7 +67,7 @@ const handleRegister=()=>{
               <MDBInput wrapperClass='mb-4' label='Email' id='form3' type='email' placeholder='Email' value={signUpdata.email} onChange={(e)=>{setSignUpdata({...signUpdata,email:e.target.value})}}/>
               <MDBInput wrapperClass='mb-4' label='Password' id='form4' type='password' placeholder='Password'value={signUpdata.password} onChange={(e)=>{setSignUpdata({...signUpdata,password:e.target.value})}}/>
             
-              <button className='w-100 mb-4 btn btn-primary border rounded-2' size='md' onClick={handleRegister} >Signup</button>
+              <button className='w-100 mb-4 btn text-light  border rounded-2' style={{background: '  #010203'}} size='md' onClick={handleRegister} >Signup</button>
 
               <div className="text-center cursor-pointer font-italic">
 

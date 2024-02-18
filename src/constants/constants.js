@@ -1,6 +1,4 @@
-export const BASE_URL='http://localhost:5000'
-
-
+export const BASE_URL= process.env.REACT_APP_URL
 export const TIMINGS=[
     {name:'12am-1am',
       id:0 },
